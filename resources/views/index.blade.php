@@ -17,21 +17,23 @@
                 <h1 class="text-center">100 Retos de programacion</h1>
                 <section>
 
-                    <div class="card mb-3">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="https://carmine-dev.tumblr.com/post/653760419571417088" alt="Reto 1">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">#1 Hola Mundo</h5>
-                                    <p class="card-text">Hola Mundo! es el programa más básico que puede existir en cualquier lenguaje de programación. Todos recordamos la primera vez que escribimos un Hola Mundo! y lo satisfactorio que fue.
-                                        El reto es escribir Hola Mundo!</p>
-                                    <a href="{{ route('day1') }}" class="btn btn-primary">Ir</a>
+                    @foreach ($challenges as $challenge)
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="{{ $challenge->img_challenge }}" alt="{{ $challenge->imgAlt_challenge }}">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ $challenge->title_challenge }}</h5>
+                                        <p class="card-text">{{ $challenge->description_challenge }}</p>
+                                        <a href="{{ route("$challenge->imgAlt_challenge") }}" class="btn btn-primary">Ir</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+
+                    @endforeach            
                     
                 </section>
             </main>

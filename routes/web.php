@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\BasicController;
+use App\Http\Controllers\{BasicController, MathController, ChallengesController};
+use App\Models\Challenge;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,7 +21,16 @@ use Illuminate\Support\Facades\Route;
 
 
 //Index de retos
-Route::view('/', 'index');
+Route::get('/', [BasicController::class, 'index'])->name('home.index');
 
 //Retos basicos sin logica compleja
-Route::get('day1',[BasicController::class, 'day1'])->name('day1');
+//Dia1
+Route::get('day1',[BasicController::class, 'day1'])->name('reto1');
+
+//Retos de Matematicas
+//Dia2
+Route::get('day2',[MathController::class, 'day2'])->name('reto2');
+
+//Agregar retos
+Route::get('challenges', [ChallengesController::class, 'index']);
+Route::post('challenges/store',[ChallengesController::class, 'store'])->name('challenges.store');
