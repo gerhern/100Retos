@@ -12,7 +12,7 @@ class MathController extends Controller
         return view('day2.index');
     }
 
-    public function triangle(Request $request){
-        dd($request);
+    public function day3(){
+        return view('day3.index');
     }
 }

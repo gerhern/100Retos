@@ -2,22 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Challenge;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Challenges;
 
 class BasicController extends Controller
 {
-    //retos sencillos con logica minima
+    //index del sitio
 
     public function index(){
-        $challenges =Challenge::all();
-        return view('index',[
-            'challenges' => $challenges
+        $days = new Challenges();
+        return view('index', [
+            'days' => $days->getDays()
         ]);
     }
 
     public function day1(){
-        
         return view('day1.index');
     }
 }

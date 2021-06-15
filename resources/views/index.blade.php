@@ -16,25 +16,10 @@
             <main class="d-flex flex-column justify-content-center">
                 <h1 class="text-center">100 Retos de programacion</h1>
                 <section>
-
-                    @foreach ($challenges as $challenge)
-                        <div class="card mb-3">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                    <img src="{{ $challenge->img_challenge }}" alt="{{ $challenge->imgAlt_challenge }}">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{ $challenge->title_challenge }}</h5>
-                                        <p class="card-text">{{ $challenge->description_challenge }}</p>
-                                        <a href="{{ route("$challenge->imgAlt_challenge") }}" class="btn btn-primary">Ir</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    @endforeach            
-                    
+                    @foreach ($days as $day)
+                    <x-challenge-card :title="$day['title']" :description="$day['description']" :url="$day['url']" :alt="$day['alt']" />
+                    @endforeach
+                   
                 </section>
             </main>
         </div>
