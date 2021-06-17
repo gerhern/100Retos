@@ -1,8 +1,17 @@
 function calculateArea(){
-    var height =parseInt(document.getElementById('height').value);
-    var base = parseInt(document.getElementById('base').value);
+    var height = 0;
+    var base = 0;
+    var result = 0;
 
-    var result = (height*base)/2;
+    height =parseInt(document.getElementById('height').value);
+    height = height ? height : 0;
+    console.log(height);
+    
+    base = parseInt(document.getElementById('base').value);
+    base = base ? base : 0;
+    console.log(base);
+
+    result = (height*base)/2;
 
     var triangle = typeOfTriangle(height, base);
 
@@ -14,7 +23,11 @@ function calculateArea(){
 
 function typeOfTriangle(height, base){
 
-    if(base == height){
+    if(height == 0 || base == 0){
+        return "Invalido";
+    }
+
+    if(base === height){
         
         return "Equilatero";
 

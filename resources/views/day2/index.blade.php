@@ -3,35 +3,33 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <title>day2</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
+
     <body>
-        <div class="container">
-            <main class="mx-auto border border-primary p-5" >
-                <h2 class="text-center">Reto 2</h2>
-                <form>
-                    <div class="mb-3">
-                      <label for="base" class="form-label">Base</label>
-                      <input type="number" class="form-control" id="base" step="0.01" name="base">
+        <div class="container flex flex-col">
+            <main class="mx-auto border border-black p-5 w-9/12" >
+                <h2 class="text-center font-bold text-6xl mb-6">Reto 2</h2>
+                <form class="flex flex-col text-2xl px-4 mb-6">
+                    <div class="flex justify-evenly my-6">
+                      <label for="base">Base</label>
+                      <input type="number" class="border-b-2 rounded-br-lg w-9/12 px-4 border-black" id="base" step="0.01" name="base">
                     </div>
 
-                    <div class="mb-3">
-                      <label for="height" class="form-label">Altura</label>
-                      <input type="number" class="form-control" id="height" step="0.01" name="height">
+                    <div class="flex justify-evenly my-6">
+                      <label for="height" class="">Altura</label>
+                      <input type="number" class="border-b-2 rounded-br-lg w-9/12 px-4 border-black" id="height" step="0.01" name="height">
                     </div>
-                    <button type="button" class="btn btn-primary" onclick="calculateArea()">Calcular</button>
+
+                    <button type="button" class="mx-auto px-6 py-2 bg-blue-500 text-white rounded-md max-w-max shadow-xl hover:bg-blue-700 font-bold" onclick="calculateArea()">Calcular</button>
                 </form>
-                  <h2 class="text-center" id="result"></h2>
-                  <br>
-                  <h2 class="text-center" id="triangle"></h2>
 
-                  <a href="/" class="btn btn-primary">Regresar</a>
+                  <h2 class="text-center text-2xl" id="result"></h2>
+                  <br>
+                  <h2 class="text-center text-2xl" id="triangle"></h2>
+
+                <x-return-button />
             </main>
 
         </div>

@@ -3,35 +3,31 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>day2</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-
+        <title>day3</title>
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
+
     <body>
-        <div class="container">
-            <main class="mx-auto border border-primary p-5" >
-                <h2 class="text-center">Reto 3</h2>
-                <h2 class="text-center">Calculadora de segundos</h2>
-                <form>
-                    <div class="mb-3">
-                      <label for="hours" class="form-label">Horas</label>
-                      <input type="number" class="form-control" id="hours" name="hours">
+        <div class="container flex flex-col">
+            <main class="mx-auto border border-black p-5 w-9/12" >
+                <h2 class="text-center font-bold text-6xl mb-6">Reto 3</h2>
+                <form class="flex flex-col text-2xl px-4 mb-6">
+                    <div class="flex justify-evenly my-6">
+                      <label for="base">Horas</label>
+                      <input type="number" class="border-b-2 rounded-br-lg w-9/12 px-4 border-black" id="hours" step="0.01" name="hours">
                     </div>
 
-                    <div class="mb-3">
-                      <label for="minutes" class="form-label">Minutos</label>
-                      <input type="number" class="form-control" id="minutes" name="minutes">
+                    <div class="flex justify-evenly my-6">
+                      <label for="height" class="">Minutos</label>
+                      <input type="number" class="border-b-2 rounded-br-lg w-9/12 px-4 border-black" id="minutes" step="0.01" name="minutes">
                     </div>
 
-                    <button type="button" class="btn btn-primary" onclick="calculate()">Calcular</button>
+                    <button type="button" class="mx-auto px-6 py-2 bg-blue-500 text-white rounded-md max-w-max shadow-xl hover:bg-blue-700 font-bold" onclick="calculate()">Calcular</button>
                 </form>
-                  <h2 class="text-center" id="result"></h2>
 
-                  <a href="/" class="btn btn-primary">Regresar</a>
+                  <h2 class="text-center text-2xl" id="result"></h2>
+
+                <x-return-button />
             </main>
 
         </div>
