@@ -50,6 +50,18 @@ class Challenges{
 
             'alt'           => 'reto3'
         ],
+
+
+        'day4' => [
+            'title'         => 'Repite la palabra',
+
+            'description'   => '¿Sabías que para repetir las mismas instrucciones dentro de un programa podemos utilizar for loops o while loops? ¿Sabías que todo lo que puedes hacer con esas loops lo puedes hacer con recursión?
+            El reto del día de hoy es crear un programa que recibe como parámetro un string y la cantidad de veces que queremos repetir ese string y devuelve una cadena con las repeteciones. ¿El twist? Sólo puedes usar una función recursiva (pro tip: no olvides tu caso base).',
+
+            'url'           => 'https://64.media.tumblr.com/861075c6d6c51eb0ecaa60f70495c07c/56881c413bce62bf-98/s2048x3072/ec13e3ac56e5a4407256c5254c9f8cdf2196c5d5.jpg',
+
+            'alt'           => 'reto4'
+        ],
     ];
 
 }

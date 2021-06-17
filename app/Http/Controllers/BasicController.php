@@ -19,4 +19,8 @@ class BasicController extends Controller
     public function day1(){
         return view('day1.index');
     }
+
+    public function day4(){
+        return view('day4.index');
+    }
 }
