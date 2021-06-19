@@ -10,6 +10,7 @@
     <body>
         <div class="container flex flex-col items-center">
             <div class="">
+                <h2 class="text-center my-6 font-bold text-6xl">Reto 1</h2>
                 <h2 class="text-center my-6 font-bold text-6xl">Hola, Mundo</h2>
             </div>
             <x-return-button />

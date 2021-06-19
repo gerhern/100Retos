@@ -15,4 +15,8 @@ class MathController extends Controller
     public function day3(){
         return view('day3.index');
     }
+
+    public function day6(){
+        return view('day6.index');
+    }
 }

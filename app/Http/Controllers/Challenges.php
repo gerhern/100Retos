@@ -74,6 +74,19 @@ class Challenges{
 
             'alt'           => 'reto5'
         ],
+
+
+        'day6' => [
+            'title'         => 'Calculadora',
+
+            'description'   => '¿Necesitamos nuestra Casio cuando tenemos Python? Yo la verdad todavía amo a mi calculadora de bolsillo, pero también amo hacer programas.El reto del día de hoy es crear una calculadora básica que reemplace a nuestra Casio. Crea un programa que tome un número, un operador, y otro número y realice el cálculo correcto.Ejemplo:```
+            calculadora(2, “+”, 2) -> 4
+            calculadora(4, “/”, 2) -> 2',
+
+            'url'           => 'https://images.pexels.com/photos/6692907/pexels-photo-6692907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+
+            'alt'           => 'reto6'
+        ],
     ];
 
 }

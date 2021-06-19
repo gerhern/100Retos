@@ -30,6 +30,8 @@ Route::get('day4',[BasicController::class, 'day4'])->name('reto4');
 Route::get('day5',[BasicController::class, 'day5'])->name('reto5');
 
 //Retos de Matematicas
-//Dia(s) 2, 3
+//Dia(s) 2, 3, 6
 Route::get('day2',[MathController::class, 'day2'])->name('reto2');
 Route::get('day3',[MathController::class, 'day3'])->name('reto3');
+Route::get('day6',[MathController::class, 'day6'])->name('reto6');
+

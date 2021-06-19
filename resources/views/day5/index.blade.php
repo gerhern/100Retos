@@ -11,6 +11,7 @@
         <div class="container flex flex-col">
             <main class="mx-auto border border-black p-5 w-9/12" >
                 <h2 class="text-center font-bold text-6xl mb-6">Reto 5</h2>
+                <h2 class="text-center font-bold text-5xl mb-6">¿Necesitamos Vocales?</h2>
                 <form class="flex flex-col text-2xl px-4 mb-6">
                     @csrf
                     <div class="flex justify-evenly my-6">
