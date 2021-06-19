@@ -62,6 +62,18 @@ class Challenges{
 
             'alt'           => 'reto4'
         ],
+
+
+        'day5' => [
+            'title'         => '¿Necesitamos Vocales?',
+
+            'description'   => '¿Sabías que existen idiomas, como el Hebreo, en donde no existen letras para las vocáles? Lo bueno es que podemos ignorarlas y aún entender lo que está escrito con puras consonantes.
+            El reto del día de hoy es eliminar las vocales de un párrafo y tratar de leerlo.',
+
+            'url'           => 'https://images.pexels.com/photos/5361246/pexels-photo-5361246.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+
+            'alt'           => 'reto5'
+        ],
     ];
 
 }

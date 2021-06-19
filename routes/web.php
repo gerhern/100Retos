@@ -24,9 +24,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [BasicController::class, 'index'])->name('home.index');
 
 //Retos basicos sin logica compleja
-//Dia(s) 1, 4
+//Dia(s) 1, 4, 5
 Route::get('day1',[BasicController::class, 'day1'])->name('reto1');
 Route::get('day4',[BasicController::class, 'day4'])->name('reto4');
+Route::get('day5',[BasicController::class, 'day5'])->name('reto5');
 
 //Retos de Matematicas
 //Dia(s) 2, 3
