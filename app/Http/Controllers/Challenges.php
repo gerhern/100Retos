@@ -87,6 +87,18 @@ class Challenges{
 
             'alt'           => 'reto6'
         ],
+
+
+        'day7' => [
+            'title'         => 'Piedra Papel o Tijera',
+
+            'description'   => 'Este es un juego en el que nunca fui bueno, pero eso no significa que hacer un programa sea difícil.El reto del día de hoy es escribir un programa que reciba como parámetro “piedra”, “papel”, o “tijera” y determine si ganó el jugador 1 o el jugador 2. Bonus: ¿puedes hacer modificar tu programa para que el ganador sea el que gané 2 de 3 partidas?Ejemplo:```
+            ppt(“piedra”, “papel”) ➞ “El ganador es el jugador 2”',
+
+            'url'           => 'https://images.pexels.com/photos/4472822/pexels-photo-4472822.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+
+            'alt'           => 'reto7'
+        ],
     ];
 
 }

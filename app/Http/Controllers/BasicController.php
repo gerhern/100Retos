@@ -28,14 +28,16 @@ class BasicController extends Controller
     }
 
     public function day5(Request $request){
+        
         $replace = new VowelReplace();
-        if($request->text != null){
-            $text = $replace->deleteVowels($request->text);
-        }else{
-            $text = '';
-        }
+        $text = $replace->getText($request);
+
         return view('day5.index', [
             'text' => $text
         ]);
+    }
+
+    public function day7(){
+        return view('day7.index');
     }
 }

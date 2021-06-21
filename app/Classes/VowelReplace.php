@@ -16,4 +16,13 @@
             
             return str_replace($this->replace, "", $text);
         }
+
+        public function getText($request){
+
+            if($request->text != null){
+                return $this->deleteVowels($request->text);
+            }else{
+                return '';
+            }
+        }
     }
