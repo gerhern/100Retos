@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Classes\Cylinder;
+
 class MathController extends Controller
 {
     //Retos basados en matematicas
@@ -18,5 +20,13 @@ class MathController extends Controller
 
     public function day6(){
         return view('day6.index');
+    }
+
+    public function day8(Request $request){
+        
+        $data = Cylinder::getData($request); 
+        return view('day8.index', [
+            'result' => $data
+        ]);
     }
 }
