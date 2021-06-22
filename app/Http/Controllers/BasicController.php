@@ -40,4 +40,8 @@ class BasicController extends Controller
     public function day7(){
         return view('day7.index');
     }
+
+    public function day9(){
+        return view('day9.index');
+    }
 }

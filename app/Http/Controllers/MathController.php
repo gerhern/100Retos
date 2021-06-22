@@ -25,6 +25,7 @@ class MathController extends Controller
     public function day8(Request $request){
         
         $data = Cylinder::getData($request); 
+        
         return view('day8.index', [
             'result' => $data
         ]);
