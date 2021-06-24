@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <title>Dia5</title>
+        <title>Dia 5</title>
 
     </head>
     <body>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>day3</title>
+        <title>Dia 3</title>
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
 

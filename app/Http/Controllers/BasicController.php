@@ -5,8 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Challenges;
 
-use App\Classes\Vowel;
-use App\Classes\VowelReplace;
+use App\Classes\{VowelReplace, PigLatin};
 
 class BasicController extends Controller
 {
@@ -43,5 +42,13 @@ class BasicController extends Controller
 
     public function day9(){
         return view('day9.index');
+    }
+
+    public function day10(Request $request){
+        $words = new PigLatin();
+        $data = $words->getData($request);
+        return view('day10.index', [
+            'text' => $data
+        ]);
     }
 }
