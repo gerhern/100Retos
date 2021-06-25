@@ -39,4 +39,5 @@ Route::get('day2',[MathController::class, 'day2'])->name('reto2');
 Route::get('day3',[MathController::class, 'day3'])->name('reto3');
 Route::get('day6',[MathController::class, 'day6'])->name('reto6');
 Route::get('day8',[MathController::class, 'day8'])->name('reto8');
+Route::get('day12',[MathController::class, 'day12'])->name('reto12');
 

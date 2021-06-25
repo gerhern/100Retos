@@ -149,6 +149,16 @@ class Challenges{
 
             'alt'           => 'reto11'
         ],
+
+        'day12' => [
+            'title'         => 'Proximo Cumpleaños',
+
+            'description'   => 'Muchos lenguajes de programación cuentan con un módulo para manejar tiempo y fechas. Haz uso de este módulo para crear un programa al que le ingreses tu fecha de nacimiento y te diga cuantos días faltan para tu próximo cumpleaños.',
+
+            'url'           => 'https://images.pexels.com/photos/1543762/pexels-photo-1543762.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+
+            'alt'           => 'reto12'
+        ],
     ];
 
 }

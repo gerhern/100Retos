@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Classes\Birthday;
 use Illuminate\Http\Request;
 
 use App\Classes\Cylinder;
@@ -28,6 +29,13 @@ class MathController extends Controller
         
         return view('day8.index', [
             'result' => $data
+        ]);
+    }
+
+    public function day12(Request $request){
+
+        return view('day12.index', [
+            'result' => Birthday::getTimeBirthday($request->date)
         ]);
     }
 }
