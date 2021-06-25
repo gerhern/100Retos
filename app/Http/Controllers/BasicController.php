@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Challenges;
 
-use App\Classes\{VowelReplace, PigLatin};
+use App\Classes\{GeneratePass, VowelReplace, PigLatin};
 
 class BasicController extends Controller
 {
@@ -50,5 +50,10 @@ class BasicController extends Controller
         return view('day10.index', [
             'text' => $data
         ]);
+    }
+
+    public function day11(Request $request){
+        $data = GeneratePass::generatePass($request);
+        return view('day11.index', ['result' => $data]);
     }
 }
