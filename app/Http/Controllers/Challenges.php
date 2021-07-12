@@ -159,6 +159,16 @@ class Challenges{
 
             'alt'           => 'reto12'
         ],
+
+        'day13' => [
+            'title'         => 'Calculadora de Propinas',
+
+            'description'   => 'Imagina que pediste comida a domicilio (porque debemos quedarnos en casa), así que crearás un programa al cual ingresarás el valor de los platillos ordenados, obtendrás la suma total de la comida y calcularás un porcentaje de propina. Recuerda que puedes ingresar una cantidad indeterminada de platillos, indica a tu programa cuando calcular el resultado final.',
+
+            'url'           => 'https://images.pexels.com/photos/7363200/pexels-photo-7363200.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+
+            'alt'           => 'reto13'
+        ],
     ];
 
 }

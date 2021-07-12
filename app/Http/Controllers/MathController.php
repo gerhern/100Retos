@@ -38,4 +38,8 @@ class MathController extends Controller
             'result' => Birthday::getTimeBirthday($request->date)
         ]);
     }
+
+    public function day13(){
+        return view('day13.index');
+    }
 }
