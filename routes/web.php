@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\{BasicController, MathController, ChallengesController};
+use App\Http\Controllers\{BasicController, ChallengeController, MathController, ChallengesController};
 use App\Models\Challenge;
 use Illuminate\Support\Facades\Route;
 
@@ -19,9 +19,12 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+//Creacion de retos
+Route::get('createNewChallenge', [ChallengeController::class, 'create']);
+Route::get('saveChallenge', [ChallengeController::class, 'store'])->name('store');
 
 //Index de retos
-Route::get('/', [BasicController::class, 'index'])->name('home.index');
+Route::get('/', [ChallengeController::class, 'index'])->name('home');
 
 //Retos basicos sin logica compleja
 //Dia(s) 1, 4, 5, 7

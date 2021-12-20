@@ -11,10 +11,10 @@ class BasicController extends Controller
 {
     //index del sitio
 
-    public function index(){
+    public function index(Request $request){
         $days = new Challenges();
         return view('index', [
-            'days' => $days->getDays()
+            'days' => $days->getDays($request)
         ]);
     }
 
