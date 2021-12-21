@@ -9,25 +9,18 @@ use App\Classes\{GeneratePass, VowelReplace, PigLatin};
 
 class BasicController extends Controller
 {
-    //index del sitio
-
-    public function index(Request $request){
-        $days = new Challenges();
-        return view('index', [
-            'days' => $days->getDays($request)
-        ]);
-    }
-
     public function day1(){
         return view('day1.index');
     }
 
-    public function day4(){
+    public function day4()
+    {
         return view('day4.index');
     }
 
-    public function day5(Request $request){
-        
+    public function day5(Request $request)
+    {
+
         $replace = new VowelReplace();
         $text = $replace->getText($request);
 
@@ -36,15 +29,18 @@ class BasicController extends Controller
         ]);
     }
 
-    public function day7(){
+    public function day7()
+    {
         return view('day7.index');
     }
 
-    public function day9(){
+    public function day9()
+    {
         return view('day9.index');
     }
 
-    public function day10(Request $request){
+    public function day10(Request $request)
+    {
         $words = new PigLatin();
         $data = $words->getData($request);
         return view('day10.index', [
@@ -52,7 +48,8 @@ class BasicController extends Controller
         ]);
     }
 
-    public function day11(Request $request){
+    public function day11(Request $request)
+    {
         $data = GeneratePass::generatePass($request);
         return view('day11.index', ['result' => $data]);
     }

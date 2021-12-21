@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layout')
+@section('content')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Retos de programación</title>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
-</head>
-
-<body class="bg-light-blue">
     <main class="container mx-auto px-6 ">
-
         <header class="flex flex-col justify-evenly items-center">
             <h1 class="text-5xl my-8">Retos de programación</h1>
             @if (session('status'))
@@ -30,6 +19,4 @@
         </section>
     </main>
     {{ $data->links() }}
-</body>
-
-</html>
+@endsection

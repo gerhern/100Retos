@@ -1,19 +1,12 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <title>Dia 1</title>
-
-    </head>
-    <body>
-        <div class="container flex flex-col items-center">
-            <div class="">
-                <h2 class="text-center my-6 font-bold text-6xl">Reto 1</h2>
-                <h2 class="text-center my-6 font-bold text-6xl">Hola, Mundo</h2>
-            </div>
+@extends('layout')
+@section('content')
+    <main class="container mx-auto flex flex-col items-center justify-center">
+        <header>
+            <h2 class="text-center my-6 font-bold text-5xl">Reto 1</h2>
+        </header>
+        <section class="w-full mx-auto bg-bold-blue rounded-xl shadow-lg flex flex-col items-center py-10">
+            <h2 class="text-center my-6 mx-auto font-bold text-5xl border border-black bg-dark-blue p-16 rounded-md shadow-lg">Hola Mundo</h2>
             <x-return-button />
-        </div>
-    </body>
-</html>
+        </section>
+    </main>
+@endsection
