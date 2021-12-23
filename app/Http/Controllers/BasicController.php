@@ -65,7 +65,11 @@ class BasicController extends Controller
 
     public function day11(Request $request)
     {
-        $data = GeneratePass::generatePass($request);
-        return view('day11.index', ['result' => $data]);
+        $pass = GeneratePass::generatePass($request);
+        $data = new challenge();
+        return view('day11.index', [
+            'result' => $pass,
+            'data' => $data->find(11)
+        ]);
     }
 }

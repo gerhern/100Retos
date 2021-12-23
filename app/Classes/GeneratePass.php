@@ -13,7 +13,7 @@ class GeneratePass{
 
         public static function generateSpecialChar(){
 
-            $chars = ['~', '^', '?', '.', '/', '!', '#', '$', '%', '&'];
+            $chars = ['~', '^', '?', '.', '/', '!', '#', '$', '%', '&', ' '];
             $random = array_rand($chars);
             return $chars[$random];
         }
