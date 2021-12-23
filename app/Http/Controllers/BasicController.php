@@ -46,7 +46,10 @@ class BasicController extends Controller
 
     public function day9()
     {
-        return view('day9.index');
+        $data = new challenge();
+        return view('day9.index',[
+            'data' => $data->find(9)
+        ]);
     }
 
     public function day10(Request $request)

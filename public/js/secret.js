@@ -14,5 +14,11 @@ function selectNumber(number){
         document.getElementById(number).style.backgroundColor = 'red';
         attempts++;
         document.getElementById('cont').innerHTML=attempts;
+        
+        if(number > secretNumber){
+            document.getElementById('result').innerHTML='-';
+        }else if (number < secretNumber){
+            document.getElementById('result').innerHTML='+';
+        }
     }
 }
