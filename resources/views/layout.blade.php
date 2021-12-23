@@ -10,7 +10,7 @@
 
 </head>
 
-<body class="bg-light-blue">
+<body class="bg-champagne">
 
     @yield('content')
 

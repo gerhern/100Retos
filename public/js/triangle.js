@@ -1,25 +1,32 @@
 function calculateArea(){
-    var height = 0;
-    var base = 0;
-    var result = 0;
+    var area;
+    var height;
+    var base;
+    var triangle;
 
     height =parseInt(document.getElementById('height').value);
-    height = height ? height : 0;
-    console.log(height);
+    height = height ? height : null;
+    console.log("La altura es de " + height);
     
     base = parseInt(document.getElementById('base').value);
-    base = base ? base : 0;
-    console.log(base);
+    base = base ? base : null;
+    console.log("La base es de " + base);
+    
+    if(isEmpty(height) || isEmpty(base)){
+        
+        document.getElementById('area').innerHTML="Todos los campos deben de estar llenos o los datos son invalidos";
+        document.getElementById('type_of_triangle').innerHTML="";
 
-    result = (height*base)/2;
-
-    var triangle = typeOfTriangle(height, base);
-
-    document.getElementById('result').innerHTML="El area del triangulo es de "+result;
-    document.getElementById('triangle').innerHTML="Este es un triangulo "+triangle;
-
+    }else{
+        
+        triangle = typeOfTriangle(height, base);
+        area = (base * height)/ 2;
+        console.log("El area del triangulo es de " + area);
+        
+        document.getElementById('area').innerHTML="El area del triangulo es de "+area;
+        document.getElementById('type_of_triangle').innerHTML="Este es un triangulo "+triangle;
+    }
 }
-
 
 function typeOfTriangle(height, base){
 
@@ -38,5 +45,13 @@ function typeOfTriangle(height, base){
     }else{
         
         return "Escaleno";
+    }
+}
+
+function isEmpty(data){
+    if(data == null){
+        return true;
+    }else{
+        return false;
     }
 }
