@@ -1,10 +1,7 @@
 @extends('layout')
 @section('content')
     <main class="container mx-auto flex flex-col items-center justify-center">
-        <header>
-            <h2 class="text-center font-bold text-6xl mb-6">Reto 2</h2>
-            <h2 class="text-center font-bold text-5xl mb-6">Area de un Triangulo</h2>
-        </header>
+        <x-page-header challengeNumber="2" challengeName="Area de un Triangulo"></x-page-header>
         <section class="w-full mx-auto bg-ash-gray rounded-xl shadow-lg flex flex-col items-center py-10">
             <form class="flex flex-col text-2xl p-1 mb-6">
                 <div class="flex justify-evenly my-6">
