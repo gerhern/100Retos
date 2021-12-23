@@ -55,9 +55,11 @@ class BasicController extends Controller
     public function day10(Request $request)
     {
         $words = new PigLatin();
-        $data = $words->getData($request);
+        $result = $words->getData($request);
+        $data = new challenge();
         return view('day10.index', [
-            'text' => $data
+            'text' => $result,
+            'data' => $data->find(10)
         ]);
     }
 

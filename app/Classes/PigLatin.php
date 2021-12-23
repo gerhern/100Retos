@@ -7,7 +7,6 @@
         public $result = [];
 
         public function getData($request){
-
             if($request->text != null){
                 $words = explode(' ', $request->text);
                 foreach($words as $word){
