@@ -6,12 +6,12 @@
             <form class="flex flex-col text-2xl p-1 mb-6">
                 <div class="flex justify-evenly my-6">
                     <label for="word">Palabra</label>
-                    <input type="text" class="border-b-2 px-2 border-ebony bg-ash-gray" id="word" name="word">
+                    <input type="text" class="border-b-2 px-2 mx-4 border-ebony bg-ash-gray" id="word" name="word">
                 </div>
 
                 <div class="flex justify-evenly my-6">
                     <label for="count" class=""># de repeticiones</label>
-                    <input type="number" class="border-b-2 px-2 border-ebony bg-ash-gray" id="count" name="count">
+                    <input type="number" class="border-b-2 px-2 mx-4 border-ebony bg-ash-gray" id="count" name="count">
                 </div>
 
                 <x-simple-button text="Repetir" event="startRecursive()"></x-simple-button>

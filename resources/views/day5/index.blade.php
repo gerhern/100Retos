@@ -9,7 +9,7 @@
                 <div class="flex justify-evenly my-6">
                     <label for="text">Parrafo</label>
                     <textarea name="text" id="text" cols="80" rows="10"
-                        class="border px-2 border-ebony bg-ash-gray"></textarea>
+                        class="border px-2 mx-4 border-ebony bg-artichoke"></textarea>
                 </div>
                 <x-submit-button text="Comenzar"></x-submit-button>
             </form>

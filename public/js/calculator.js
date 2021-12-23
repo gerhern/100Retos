@@ -46,7 +46,7 @@ function calculate(){
                 result = parseFloat(firstNumber) - parseFloat(secondNumber);
                 break;
             case '*':
-               result = parseFloat(firstNumber) * parseFloat(secondNumber);
+                result = parseFloat(firstNumber) * parseFloat(secondNumber);
                 break;
             case '/':
                 result = parseFloat(firstNumber) / parseFloat(secondNumber);

@@ -1,0 +1,1 @@
+<button class="bg-ash-gray w-1/4 h-full border-2 border-black hover:bg-artichoke" onclick="{{ $event }}">{{ $number }}</button>

@@ -1,63 +1,39 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <title>Dia 6</title>
+@extends('layout')
+@section('content')
+    <main class="container mx-auto flex flex-col items-center justify-center">
+        <x-page-header challengeNumber="{{ $data->id }}" challengeName="{{ $data->title }}"></x-page-header>
 
-    </head>
-    <body>
-        <div class="container flex flex-col items-center">
-            <div class="">
-                <h2 class="text-center my-6 font-bold text-6xl">Reto 6</h2>
-                <h2 class="text-center my-6 font-bold text-5xl">Calculadora</h2>
-            </div>
+        <section class="w-full mx-auto bg-ash-gray rounded-xl shadow-lg flex flex-col items-center py-10">
+
             <div class="w-1/3 border-2 border-black border-collapse text-4xl flex flex-row flex-wrap my-6">
                 <input type="text" class="border-2 border-black w-full" id="numberBox">
 
-                <button class="bg-blue-300 w-1/4 h-full border-2 border-black"
-                    onclick="getNumber(1)">1</button>
-                <button class="bg-blue-300 w-1/4 h-full border-2 border-black" 
-                    onclick="getNumber(2)">2</button>
-                <button class="bg-blue-300 w-1/4 h-full border-2 border-black" 
-                    onclick="getNumber(3)">3</button>
-                <button class="bg-blue-300 w-1/4 h-full border-2 border-black" 
-                    onclick="getOperator('/')">/</button>
+                <x-calculator-button event="getNumber(1)" number="1"></x-calculator-button>
+                <x-calculator-button event="getNumber(2)" number="2"></x-calculator-button>
+                <x-calculator-button event="getNumber(3)" number="3"></x-calculator-button>
+                <x-calculator-button event="getOperator('/')" number="/"></x-calculator-button>
 
-                <button class="bg-blue-300 w-1/4 h-full border-2 border-black" 
-                    onclick="getNumber(4)">4</button>
-                <button class="bg-blue-300 w-1/4 h-full border-2 border-black" 
-                    onclick="getNumber(5)">5</button>
-                <button class="bg-blue-300 w-1/4 h-full border-2 border-black" 
-                    onclick="getNumber(6)">6</button>
-                <button class="bg-blue-300 w-1/4 h-full border-2 border-black" 
-                    onclick="getOperator('*')">*</button>
+                <x-calculator-button event="getNumber(4)" number="4"></x-calculator-button>
+                <x-calculator-button event="getNumber(5)" number="5"></x-calculator-button>
+                <x-calculator-button event="getNumber(6)" number="6"></x-calculator-button>
+                <x-calculator-button event="getOperator('*')" number="*"></x-calculator-button>
 
-                <button class="bg-blue-300 w-1/4 h-full border-2 border-black" 
-                    onclick="getNumber(7)">7</button>
-                <button class="bg-blue-300 w-1/4 h-full border-2 border-black" 
-                    onclick="getNumber(8)">8</button>
-                <button class="bg-blue-300 w-1/4 h-full border-2 border-black" 
-                    onclick="getNumber(9)">9</button>
-                <button class="bg-blue-300 w-1/4 h-full border-2 border-black" 
-                    onclick="getOperator('+')">+</button>
+                <x-calculator-button event="getNumber(7)" number="7"></x-calculator-button>
+                <x-calculator-button event="getNumber(8)" number="8"></x-calculator-button>
+                <x-calculator-button event="getNumber(9)" number="9"></x-calculator-button>
+                <x-calculator-button event="getOperator('+')" number="+"></x-calculator-button>
 
-                <button class="bg-blue-300 w-1/4 h-full border-2 border-black" 
-                    onclick="getNumber('.')">.</button>
-                <button class="bg-blue-300 w-1/4 h-full border-2 border-black" 
-                    onclick="getNumber(0)">0</button>
-                <button class="bg-blue-300 w-1/4 h-full border-2 border-black" 
-                    onclick="deleteAll()">C</button>
-                <button class="bg-blue-300 w-1/4 h-full border-2 border-black" 
-                    onclick="getOperator('-')">-</button>
+                <x-calculator-button event="getNumber('.')" number="."></x-calculator-button>
+                <x-calculator-button event="getNumber(0)" number="0"></x-calculator-button>
+                <x-calculator-button event="deleteAll()" number="C"></x-calculator-button>
+                <x-calculator-button event="getOperator('-')" number="-"></x-calculator-button>
 
-                <button class="bg-blue-300 w-full h-full border-2 border-black"
+                <button class="bg-ash-gray hover:bg-artichoke w-full h-full border-2 border-black"
                     onclick="calculate()">=</button>
 
             </div>
             <x-return-button />
-        </div>
-    </body>
+        </section>
+    </main>
     <script src="{{ asset('js/calculator.js') }}"></script>
-</html>
+@endsection

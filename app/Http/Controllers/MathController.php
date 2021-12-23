@@ -27,7 +27,10 @@ class MathController extends Controller
     }
 
     public function day6(){
-        return view('day6.index');
+        $data = new challenge();
+        return view('day6.index',[
+            'data' => $data->find(6)
+        ]);
     }
 
     public function day8(Request $request){

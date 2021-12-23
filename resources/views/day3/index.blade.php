@@ -6,13 +6,13 @@
             <form class="flex flex-col text-2xl p-1 mb-6">
                 <div class="flex justify-evenly my-6">
                     <label for="base">Horas</label>
-                    <input type="number" class="border-b-2 px-2 border-ebony bg-ash-gray" id="hours" step="0.01"
+                    <input type="number" class="border-b-2 px-2 mx-4 border-ebony bg-ash-gray" id="hours" step="0.01"
                         name="hours">
                 </div>
 
                 <div class="flex justify-evenly my-6">
                     <label for="height" class="">Minutos</label>
-                    <input type="number" class="border-b-2 px-2 border-ebony bg-ash-gray" id="minutes" step="0.01"
+                    <input type="number" class="border-b-2 px-2 mx-4 border-ebony bg-ash-gray" id="minutes" step="0.01"
                         name="minutes">
                 </div>
 

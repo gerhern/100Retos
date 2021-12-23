@@ -17,6 +17,8 @@
                     :alt="$day->pointer" />
             @endforeach
         </section>
+        <section class="py-4">
+            {{ $data->links() }}
+        </section>
     </main>
-    {{ $data->links() }}
 @endsection
