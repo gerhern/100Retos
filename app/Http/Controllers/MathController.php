@@ -6,17 +6,24 @@ use App\Classes\Birthday;
 use Illuminate\Http\Request;
 
 use App\Classes\Cylinder;
+use App\Models\challenge;
 
 class MathController extends Controller
 {
     //Retos basados en matematicas
 
     public function day2(){
-        return view('day2.index');
+        $data = new challenge();
+        return view('day2.index',[
+            'data' => $data->find(2)
+        ]);
     }
 
     public function day3(){
-        return view('day3.index');
+        $data = new challenge();
+        return view('day3.index',[
+            'data' => $data->find(3)
+        ]);
     }
 
     public function day6(){

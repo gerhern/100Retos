@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
     <main class="container mx-auto flex flex-col items-center justify-center">
-        <x-page-header challengeNumber="3" challengeName="Reloj"></x-page-header>
+        <x-page-header challengeNumber="{{ $data->id }}" challengeName="{{ $data->tittle }}"></x-page-header>
         <section class="w-full mx-auto bg-ash-gray rounded-xl shadow-lg flex flex-col items-center py-10">
             <form class="flex flex-col text-2xl p-1 mb-6">
                 <div class="flex justify-evenly my-6">

@@ -3,29 +3,37 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Challenges;
+use App\Models\challenge;
 
 use App\Classes\{GeneratePass, VowelReplace, PigLatin};
 
 class BasicController extends Controller
 {
     public function day1(){
-        return view('day1.index');
+        $day = new challenge();
+        return view('day1.index',[
+            'data' => $day->find(1)
+        ]);
     }
 
-    public function day4()
-    {
-        return view('day4.index');
+    public function day4(){
+
+        $data = new challenge();
+        return view('day4.index',[
+            'data' => $data->find(4)
+        ]);
     }
 
     public function day5(Request $request)
     {
 
+        $data = new challenge();
         $replace = new VowelReplace();
         $text = $replace->getText($request);
 
         return view('day5.index', [
-            'text' => $text
+            'text' => $text,
+            'data' => $data->find(5)
         ]);
     }
 
