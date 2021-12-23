@@ -35,10 +35,12 @@ class MathController extends Controller
 
     public function day8(Request $request){
         
-        $data = Cylinder::getData($request); 
+        $cylinder = Cylinder::getData($request);
+        $data = new challenge();
         
         return view('day8.index', [
-            'result' => $data
+            'result' => $cylinder,
+            'data' => $data->find(8)
         ]);
     }
 

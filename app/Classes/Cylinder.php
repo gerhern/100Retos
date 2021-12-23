@@ -9,7 +9,7 @@
             if($request->radius != null && $request->height != null){
                 return Cylinder::getVolume($request->radius, $request->height);
             }else{
-                return 'Datos no validos';
+                return '';
             }
         }
 

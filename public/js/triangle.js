@@ -12,7 +12,7 @@ function calculateArea(){
     base = base ? base : null;
     console.log("La base es de " + base);
     
-    if(isEmpty(height) || isEmpty(base)){
+    if(isEmpty(height) || isEmpty(base) || height < 0 || base < 0){
         
         document.getElementById('area').innerHTML="Todos los campos deben de estar llenos o los datos son invalidos";
         document.getElementById('type_of_triangle').innerHTML="";
