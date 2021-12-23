@@ -15,7 +15,7 @@ class Birthday{
 
             if($today->lessThan($birth)){
                 $result = $today->diffInDays($birth);
-            }else{
+            }else {
                 $result = $today->diffInDays($birth);
                 $result= ($result-365)*(-1);
             }

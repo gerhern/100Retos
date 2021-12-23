@@ -12,32 +12,36 @@ class MathController extends Controller
 {
     //Retos basados en matematicas
 
-    public function day2(){
+    public function day2()
+    {
         $data = new challenge();
-        return view('day2.index',[
+        return view('day2.index', [
             'data' => $data->find(2)
         ]);
     }
 
-    public function day3(){
+    public function day3()
+    {
         $data = new challenge();
-        return view('day3.index',[
+        return view('day3.index', [
             'data' => $data->find(3)
         ]);
     }
 
-    public function day6(){
+    public function day6()
+    {
         $data = new challenge();
-        return view('day6.index',[
+        return view('day6.index', [
             'data' => $data->find(6)
         ]);
     }
 
-    public function day8(Request $request){
-        
+    public function day8(Request $request)
+    {
+
         $cylinder = Cylinder::getData($request);
         $data = new challenge();
-        
+
         return view('day8.index', [
             'result' => $cylinder,
             'data' => $data->find(8)
@@ -46,12 +50,22 @@ class MathController extends Controller
 
     public function day12(Request $request){
 
-        return view('day12.index', [
-            'result' => Birthday::getTimeBirthday($request->date)
-        ]);
+        $data = new challenge();
+
+        if (!$request) {
+            return view('day12.index', [
+                'data' => $data->find(12)
+            ]);
+        } else {
+            return view('day12.index', [
+                'result' => Birthday::getTimeBirthday($request->date),
+                'data' => $data->find(12)
+            ]);
+        }
     }
 
-    public function day13(){
+    public function day13()
+    {
         return view('day13.index');
     }
 }
