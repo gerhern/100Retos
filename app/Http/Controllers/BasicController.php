@@ -24,8 +24,7 @@ class BasicController extends Controller
         ]);
     }
 
-    public function day5(Request $request)
-    {
+    public function day5(Request $request){
 
         $data = new challenge();
         $replace = new VowelReplace();
@@ -37,9 +36,12 @@ class BasicController extends Controller
         ]);
     }
 
-    public function day7()
-    {
-        return view('day7.index');
+    public function day7(){
+
+        $data = new challenge();
+        return view('day7.index',[
+            'data' => $data->find(7)
+        ]);
     }
 
     public function day9()
