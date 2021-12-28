@@ -1,16 +1,12 @@
+var i = 1;
 
-
-a = 0;
 function addDish(){
-        a++;
-
         var div = document.createElement('div');
-        div.setAttribute('class', 'form-inline');
-            div.innerHTML = `<div class="flex justify-evenly my-6">
-            <label for="dish">Platillo</label>
-            <input type="number" class="border-2 rounded-lg px-4 border-black" id="dish" name="dish'+a+'" type="text"/>
-            </div>
-            `
-;
-            document.getElementById('dish').appendChild(div);
+        div.setAttribute('class', 'flex justify-evenly my-6');
+            div.innerHTML = `
+            <label>Platillo</label>
+            <input type="number" class="border-b-2 px-2 mx-4 border-ebony bg-ash-gray" type="text" name="dish`+ this.i + `"/>
+            `;
+            document.getElementById('list').append(div);
+            this.i++
 }

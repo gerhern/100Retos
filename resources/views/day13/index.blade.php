@@ -1,39 +1,22 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dia 13</title>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
-
-<body>
-    <div class="container flex flex-col">
-        <main class="mx-auto border border-black p-5 w-9/12">
-            <h2 class="text-center font-bold text-6xl mb-6">Reto 13</h2>
-            <h2 class="text-center font-bold text-5xl mb-6">Calculadora de Propinas</h2>
-            <h2 class="text-center text-2xl" id="result">La cuenta es de $1200, la propina recomendada es de $120</h2>
-            <div class="flex flex-col text-2xl px-4 mb-6">
-                <div class="flex justify-evenly my-6" id="dish0">
-                    <label for="dish">Platillo</label>
-                    <input type="number" class="border-2 rounded-lg px-4 border-black" id="dish">
+@extends('layout')
+@section('content')
+    <main class="container mx-auto flex flex-col items-center justify-center">
+        <x-page-header challengeNumber="{{ $data->id }}" challengeName="{{ $data->title }}"></x-page-header>
+        <section class="w-full mx-auto bg-ash-gray rounded-xl shadow-lg flex flex-col items-center py-10">
+            <x-simple-button text="Agregar platillo" event="addDish()"></x-simple-button>
+            <form class="flex flex-col text-2xl p-1 mb-6" id="list">
+                <div class="flex justify-evenly my-6" >
+                    <label for="dish0">Platillo</label>
+                    <input type="number" class="border-b-2 px-2 mx-4 border-ebony bg-ash-gray" id="dish0" name="dish0">
                 </div>
 
-                <button
-                    class="my-4 px-6 py-2 bg-green-500 text-white rounded-md max-w-max shadow-xl hover:bg-green-700 font-bold"
-                    onclick="addDish()">Agregar Platillo</button>
-
-                <button
-                    class="mx-auto px-6 py-2 bg-blue-500 text-white rounded-md max-w-max shadow-xl hover:bg-blue-700 font-bold">Calcular</button>
-
+                <input type="hidden" name="list">
+            </form>
+            <div class="my-4">
+                <x-simple-button text="Calcular" event="calculate()"></x-simple-button>
             </div>
-
             <x-return-button />
-        </main>
-
-    </div>
-</body>
-<script src="{{ asset('js/tipCalculator.js') }}"></script>
-
-</html>
+        </section>
+    </main>
+    <script src="{{ asset('js/tipCalculator.js') }}"></script>
+@endsection
